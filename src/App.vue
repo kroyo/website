@@ -1,13 +1,17 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
+    <nav-slider></nav-slider>
     <router-view/>
   </div>
 </template>
 
 <script>
+import navSlider from './components/common/nav.vue'
 export default {
-  name: 'App'
+  name: 'App',
+  components: {
+    navSlider
+  }
 }
 </script>
 

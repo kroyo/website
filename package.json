@@ -2,7 +2,7 @@
   "name": "my-website",
   "version": "1.0.0",
   "description": "this is my website start at 2018-09-21",
-  "author": "kroyo <kroyoshi@163.com>",
+  "author": "kroyo",
   "private": true,
   "scripts": {
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
@@ -52,6 +52,7 @@
     "postcss-loader": "^2.0.8",
     "postcss-url": "^7.2.1",
     "rimraf": "^2.6.0",
+    "sass-loader": "^7.1.0",
     "semver": "^5.3.0",
     "shelljs": "^0.7.6",
     "uglifyjs-webpack-plugin": "^1.1.1",
