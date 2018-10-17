@@ -28,7 +28,7 @@
         <span class="li-icon" title="github"><i class="iconfont icon-github"></i></span>
       </a>
       <router-link tag="a" to="/setting" class="a-icon">
-        <span class="li-icon" title="设置" @click="hideLeftContent"><i class="iconfont icon-setting"></i></span>
+        <span class="li-icon" title="设置"><i class="iconfont icon-setting"></i></span>
       </router-link>
     </div>
   </nav>
@@ -40,7 +40,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import url('http://at.alicdn.com/t/font_875913_5p2166y4hd6.css');
 $theme-color: #409EFF;
 .site-header{
   position:relative;
@@ -48,6 +47,7 @@ $theme-color: #409EFF;
   height: 40px;
   line-height: 40px;
   overflow: hidden;
+  z-index: 1;
 }
 .header-ul{
   height: 100%;
