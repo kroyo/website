@@ -8,7 +8,7 @@
       <p class="disc">想到重阳节也许你脑海中第一个浮现的就是老人，对于大多数中国家庭来讲</p>
     </section>
     <footer class="home-footer">
-       Copyright &copy; 2018 ZHONGLIEHAO.COM
+       Copyright &copy; 2018~{{ new Date().getFullYear() }}  ZHONGLH.TOP
        <div class="bg-infor">每日一图由 时光浅滩 提供</div>
     </footer>
   </main>
@@ -18,7 +18,7 @@
 export default {}
 </script>
 
-<style lang="scss" scoped>
+<style lang="stylus" scoped>
 .home{
   position: fixed;
   top: 0;

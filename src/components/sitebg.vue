@@ -42,7 +42,7 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="stylus" scoped>
 .site-bgsection{
   display: block;
   width: 100%;

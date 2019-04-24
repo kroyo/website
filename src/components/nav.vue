@@ -7,16 +7,13 @@
       <router-link to="/home">
         <li>首页</li>
       </router-link>
-      <a href="http://www.daiwei.org/blog" target="_black">
+      <a href="http://blog.zhonglh.top" target="_black">
         <li>博客</li>
       </a>
-      <router-link to="/music">
-        <li>音乐</li>
-      </router-link>
       <router-link to="/about">
         <li>关于</li>
       </router-link>
-      <router-link tag="a" to="/reward">
+      <router-link to="/reward">
         <li>
           <i class="iconfont icon-reward"></i>
           打赏
@@ -39,8 +36,8 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
-$theme-color: #409EFF;
+<style lang="stylus" scoped>
+$theme-color = #409EFF;
 .site-header{
   position:relative;
   width: 100%;
