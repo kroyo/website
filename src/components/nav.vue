@@ -2,18 +2,21 @@
   <nav class="site-header">
     <ul class="header-ul">
       <router-link class="logo" to="/home">
-        <img width="36" height="36" src="http://www.daiwei.org/new/dw.png" title="" alt="">
+        <img width="36" height="36" src="http://www.daiwei.org/new/dw.png" title="遗留的时光 | 个人网站" alt="遗留的时光">
       </router-link>
-      <router-link to="/home">
+      <router-link to="/home" :class="{'link-active':routerName=='home'}">
         <li>首页</li>
       </router-link>
       <a href="http://blog.zhonglh.top" target="_black">
         <li>博客</li>
       </a>
-      <router-link to="/about">
+      <router-link to="/course" :class="{'link-active':routerName=='course'}">
+        <li>历程</li>
+      </router-link>
+      <router-link to="/about" :class="{'link-active':routerName=='about'}">
         <li>关于</li>
       </router-link>
-      <router-link to="/reward">
+      <router-link to="/reward" :class="{'link-active':routerName=='reward'}">
         <li>
           <i class="iconfont icon-reward"></i>
           打赏
@@ -24,7 +27,7 @@
       <a href="https://github.com/kroyo/website" target="_black">
         <span class="li-icon" title="github"><i class="iconfont icon-github"></i></span>
       </a>
-      <router-link tag="a" to="/setting" class="a-icon">
+      <router-link tag="a" to="/setting" class="a-icon" :class="{'link-active':routerName=='setting'}">
         <span class="li-icon" title="设置"><i class="iconfont icon-setting"></i></span>
       </router-link>
     </div>
@@ -33,6 +36,19 @@
 
 <script>
 export default {
+  data() {
+    return{
+    }
+  },
+  created(){
+    
+  },
+  computed:{
+    // router 模块   link-active时使用
+    routerName:function(){
+      return this.$route.name;
+    }
+  }
 }
 </script>
 

@@ -15,9 +15,14 @@ export default new Router({
       component: () => import('@/views/home.vue')
     },
     {
-      path: '/about',
-      name: 'about',
-      component: () => import('@/views/about/about.vue')
+      path: '/reward',
+      name: 'reward',
+      component: () => import('@/views/reward/reward.vue')
+    },
+    {
+      path: '/course',
+      name: 'course',
+      component: () => import('@/views/course/course.vue')
     },
     {
       path: '/reward',

@@ -2,14 +2,14 @@
   <main class="home">
     <section class="home-center">
       <h1 class="title">
-        又是一年重阳日
-        <span>2018-10-17</span>
+        <span class="text">又是一年重阳日</span>
+        <span class="date">2018-10-17</span>
       </h1>
       <p class="disc">想到重阳节也许你脑海中第一个浮现的就是老人，对于大多数中国家庭来讲</p>
     </section>
     <footer class="home-footer">
        Copyright &copy; 2018~{{ new Date().getFullYear() }}  ZHONGLH.TOP
-       <div class="bg-infor">每日一图由 时光浅滩 提供</div>
+       <div class="bg-infor">每日一图由 遗留的时光 提供</div>
     </footer>
   </main>
 </template>
@@ -39,10 +39,12 @@ export default {}
     line-height: 60px;
     font-size: 22px;
     color: #fff;
-    span{
+    .text{
+      margin-right: 20px;
+    }
+    .date{
       font-size: 14px;
       font-weight: 400;
-      margin-left: 20px;
     }
   }
   .disc{
