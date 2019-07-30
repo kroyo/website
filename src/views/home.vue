@@ -2,20 +2,40 @@
   <main class="home">
     <section class="home-center">
       <h1 class="title">
-        <span class="text">又是一年重阳日</span>
-        <span class="date">2018-10-17</span>
+        <span class="text" v-if="title">{{title}}</span>
+        <span class="date">{{date}}</span>
       </h1>
-      <p class="disc">想到重阳节也许你脑海中第一个浮现的就是老人，对于大多数中国家庭来讲</p>
+      <p class="disc">{{disc}}</p>
     </section>
     <footer class="home-footer">
-       Copyright &copy; 2018~{{ new Date().getFullYear() }}  ZHONGLH.TOP
-       <div class="bg-infor">每日一图由 遗留的时光 提供</div>
+       Copyright &copy; 2019{{footerDate}}  ZHONGLH.TOP
+       <div class="bg-infor">每日一图由 必应美图 提供</div>
     </footer>
   </main>
 </template>
 
 <script>
-export default {}
+export default {
+  props: {
+    disc: String,
+    date: String
+  },
+  data() {
+    return {
+      title: '',
+    }
+  },
+  computed: {
+    // 网站制作时间计算
+    footerDate() {
+      let nowDate = new Date().getFullYear();
+      if(nowDate > 2019) {
+        return `~${nowDate}`
+      }
+      return ''
+    }
+  }
+}
 </script>
 
 <style lang="stylus" scoped>

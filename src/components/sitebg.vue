@@ -1,5 +1,5 @@
 <template>
-  <div class="site-bgsection"
+  <div ref="maskbg" class="site-bgsection"
     :style="{backgroundImage : 'url(' + imagepath + ')', backgroundSize:imagesize, backgroundPosition:imageposition}">
     <div class="mask-bg"></div>
   </div>
@@ -7,11 +7,14 @@
 
 <script>
 // import SetMaskType from './selectmask/selectmask.js'
+import { apiBgImg } from '../api/api.js'
+import { addClass, removeClass } from '../utils/dom.js'
+
 export default {
   props: {
     imagepath: {
       type: String,
-      default: 'http://daiwei.org/vue/bg/bg_45249923.jpg'
+      default: '@/assets/images/bg-default.jpg'
     },
     maskcolor: {
       type: String,
@@ -36,13 +39,26 @@ export default {
       gamma: ''
     }
   },
-  computed: {
-    
+  updated() {
+    this.$nextTick(() => {
+      this.loadimgTrans()
+    })
+  },
+  methods: {
+    loadimgTrans() {
+      addClass(this.$refs.maskbg, 'load')
+      let img = new Image()
+      img.src = this.imagepath
+      img.onload = () => {
+        removeClass(this.$refs.maskbg, 'load')
+      }
+    }
   }
 }
 </script>
 
 <style lang="stylus" scoped>
+$color_deep_gray = #222;
 .site-bgsection{
   display: block;
   width: 100%;
@@ -52,6 +68,32 @@ export default {
   left: 0;
   z-index: -2;
   background-color: #000;
+  transition: all .4s
+  &:before{
+    content: ''
+    position:absolute
+    top: 0
+    left: 0
+    right: 0
+    bottom:0
+    background-color: $color_deep_gray
+    opacity: 0
+    visibility:hidden
+    transition: all 0.4s
+  }
+  &.load{
+    &:before{
+      content: ''
+      position:absolute
+      top: 0
+      left: 0
+      right: 0
+      bottom:0
+      opacity: 1
+      visibility:visible
+      background-color: $color_deep_gray
+    }
+  }
 }
 .mask-bg{
   width: 100%;

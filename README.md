@@ -1,4 +1,4 @@
-# my-site
+# 个人网站开发
 
 ## Project setup
 ```
@@ -25,5 +25,4 @@ yarn run test
 yarn run lint
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+## 项目借鉴daiwei.org网站布局

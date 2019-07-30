@@ -1,21 +1,49 @@
 <template>
   <div id="app">
-    <site-bg></site-bg>
+    <site-bg :imagepath="imagepath"></site-bg>
     <nav-slider></nav-slider>
     <transition name="fade">
-      <router-view class="fade-content" />
+      <keep-alive>
+        <router-view class="fade-content" :disc="disc" :date="date" />
+      </keep-alive>
     </transition>
   </div>
 </template>
 
 <script>
+import { apiBgImg } from './api/api.js'
 import navSlider from '@/components/nav.vue'
 import siteBg from '@/components/sitebg.vue'
+
 export default {
   name: 'App',
   components: {
     navSlider,
     siteBg
+  },
+  data() {
+    return{
+      imagepath: '',
+      disc: '',
+      date: ''
+    }
+  },
+  created() {
+    this.getBgImg();
+  },
+  methods: {
+    // 获取必应背景图片
+    getBgImg() {
+      apiBgImg().then(res => {
+        console.log(res);
+        if(!res.data) {
+          return;
+        }
+        this.imagepath = `http://www.bing.com/${res.data.url}`;
+        this.disc = res.data.disc;
+        this.date = new Date().Format('yyyy-MM-dd');
+      })
+    }
   }
 }
 </script>
