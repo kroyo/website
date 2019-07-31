@@ -53,7 +53,8 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-$theme-color = #409EFF;
+// $theme-color = #409EFF;
+$theme-color = #b3dc39;
 .site-header{
   position:relative;
   width: 100%;

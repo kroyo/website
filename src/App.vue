@@ -12,6 +12,7 @@
 
 <script>
 import { apiBgImg } from './api/api.js'
+import { setConsole } from './utils/tool.js'
 import navSlider from '@/components/nav.vue'
 import siteBg from '@/components/sitebg.vue'
 
@@ -28,8 +29,9 @@ export default {
       date: ''
     }
   },
-  created() {
+  mounted() {
     this.getBgImg();
+    setConsole('每行代码都是梦想的基石'); 
   },
   methods: {
     // 获取必应背景图片
