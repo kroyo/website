@@ -15,6 +15,11 @@ export default new Router({
       component: () => import('@/views/home.vue')
     },
     {
+      path: '/blog',
+      name: 'blog',
+      component: () => import('@/views/blog/blog.vue')
+    },
+    {
       path: '/reward',
       name: 'reward',
       component: () => import('@/views/reward/reward.vue')
@@ -25,9 +30,9 @@ export default new Router({
       component: () => import('@/views/course/course.vue')
     },
     {
-      path: '/reward',
-      name: 'reward',
-      component: () => import('@/views/reward/reward.vue')
+      path: '/about',
+      name: 'about',
+      component: () => import('@/views/about/about.vue')
     }
   ]
 })

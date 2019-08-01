@@ -4,10 +4,13 @@ import router from './router'
 import store from './store'
 
 import VueLazyLoad from 'vue-lazyload'
+import elementUI from 'element-ui'
+import 'element-ui/lib/theme-chalk/index.css'
 
 import './utils/format'    // Date.Format 方法
 
 Vue.use(VueLazyLoad)
+Vue.use(elementUI)
 
 Vue.config.productionTip = false
 

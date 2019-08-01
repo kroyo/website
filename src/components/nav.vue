@@ -7,9 +7,9 @@
       <router-link to="/home" :class="{'link-active':routerName=='home'}">
         <li>首页</li>
       </router-link>
-      <a href="http://blog.zhonglh.top" target="_black">
+      <router-link to="/blog" :class="{'link-active':routerName=='blog'}">
         <li>博客</li>
-      </a>
+      </router-link>
       <router-link to="/course" :class="{'link-active':routerName=='course'}">
         <li>历程</li>
       </router-link>

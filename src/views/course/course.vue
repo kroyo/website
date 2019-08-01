@@ -1,10 +1,14 @@
 <template>
-  <div>历程</div>
+  <section class="course">历程</section>
 </template>
 
 <script>
 export default {
-  
+  data() {
+    return {
+      
+    }
+  }
 }
 </script>
 <style lang="stylus" scoped>

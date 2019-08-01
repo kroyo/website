@@ -16,4 +16,7 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
+.desc-content{
+  color: #ffffff
+}
 </style>

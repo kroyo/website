@@ -1,17 +1,13 @@
 <template>
-  <main class="home">
-    <section class="home-center">
+  <section class="home">
+    <div class="home-content">
       <h1 class="title">
         <span class="text" v-if="title">{{title}}</span>
         <span class="date">{{date}}</span>
       </h1>
       <p class="disc">{{disc}}</p>
-    </section>
-    <footer class="home-footer">
-       Copyright &copy; 2019{{footerDate}}  ZHONGLH.TOP
-       <div class="bg-infor">每日一图由 必应美图 提供</div>
-    </footer>
-  </main>
+    </div>
+  </section>
 </template>
 
 <script>
@@ -24,31 +20,21 @@ export default {
     return {
       title: '',
     }
-  },
-  computed: {
-    // 网站制作时间计算
-    footerDate() {
-      let nowDate = new Date().getFullYear();
-      if(nowDate > 2019) {
-        return `~${nowDate}`
-      }
-      return ''
-    }
   }
 }
 </script>
 
 <style lang="stylus" scoped>
 .home{
-  position: fixed;
-  top: 0;
-  left: 0;
-  bottom: 0;
+  // position: fixed;
+  // top: 0;
+  // left: 0;
+  // bottom: 0;
   display: flex;
   width: 100%;
   align-items: center;
 }
-.home-center{
+.home-content{
   display: flex;
   max-width: 1240px;
   justify-content: center;
@@ -71,21 +57,6 @@ export default {
     line-height: 40px;
     font-size: 14px;
     color: #fff;
-  }
-}
-.home-footer{
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 40px;
-  line-height: 40px;
-  color: #fff;
-  font-size: 12px;
-  text-align: center;
-  .bg-infor{
-    position: absolute;
-    top: 0;
-    right: 20px;
   }
 }
 </style>
