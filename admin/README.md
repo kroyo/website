@@ -1,29 +1,29 @@
-# admin
+# mysite-admin
 
-## Project setup
-```
-yarn install
-```
 
-### Compiles and hot-reloads for development
-```
-yarn run serve
-```
+## Build
 
-### Compiles and minifies for production
-```
-yarn run build
-```
+```bash
+# build for test environment
+npm run build:stage
 
-### Run your tests
+# build for production environment
+npm run build:prod
 ```
-yarn run test
-```
+This will automatically open http://localhost:9528
 
-### Lints and fixes files
-```
-yarn run lint
-```
+## Advanced
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+```bash
+# preview the release environment effect
+npm run preview
+
+# preview the release environment effect + static resource analysis
+npm run preview -- --report
+
+# code format check
+npm run lint
+
+# code format check and auto fix
+npm run lint -- --fix
+```

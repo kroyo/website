@@ -1,19 +1,18 @@
 {
-  "name": "lin-cms-koa",
-  "version": "0.2.0-beta.1",
-  "description": "simple and practical CMS implememted by koa",
-  "main": "app/starter.js",
+  "name": "my-website",
+  "version": "1.0.0",
+  "description": "Node.js + Koa2 + MySQL + Vue.js 实战开发一套完整个人博客项目网站",
+  "main": "app/app.js",
   "scripts": {
     "start:dev": "cross-env NODE_ENV=development nodemon",
-    "start:prod": "cross-env NODE_ENV=production node app/starter.js",
+    "start:prod": "cross-env NODE_ENV=production node app/app.js",
     "prettier": "prettier --write app/**/*.js app/*.js app/**/**/*.js app/**/**/**/*.js tests/**/*.js && eslint app tests --fix"
   },
   "keywords": [
-    "lin",
-    "cms",
-    "koa"
+    "nodejs",
+    "koa2"
   ],
-  "author": "pedro",
+  "author": "zhonglh",
   "license": "MIT",
   "devDependencies": {
     "@types/eslint": "^4.16.6",
