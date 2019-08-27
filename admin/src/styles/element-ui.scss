@@ -42,3 +42,18 @@
     display: block
   }
 }
+
+.el-pagination{
+  margin: 10px 0;
+  text-align: right;
+  .el-pagination__total{
+    float: left;
+  }
+}
+
+.list-container{
+  .el-form-item{
+    display: inline-block;
+    margin: 0 5px !important;
+  }
+}

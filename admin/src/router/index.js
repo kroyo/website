@@ -59,13 +59,53 @@ export const constantRoutes = [
     component: Layout,
     redirect: '/article/list',
     name: 'Article',
-    meta: { title: '文章管理', icon: 'article' },
+    meta: { title: '文章管理', icon: 'category' },
     children:[
       {
         path:'list',
         name: 'List',
         component: () => import('@/views/article/list'),
-        meta: { title: '文章列表', icon: '' }
+        meta: { title: '文章列表', icon: 'list' }
+      },
+      {
+        path:'add',
+        name: 'Add',
+        component: () => import('@/views/article/add'),
+        meta: { title: '添加文章', icon: 'add' }
+      }
+    ]
+  },
+  {
+    path: '/category',
+    component: Layout,
+    redirect: '/category/list',
+    name: 'Category',
+    meta: { title: '分类管理', icon: 'article' },
+    children: [
+      {
+        path: 'list',
+        name: 'List',
+        component: () => import('@/views/category/list'),
+        meta: { title: '分类列表', icon: 'list' }
+      },
+      {
+        path: 'add',
+        name: 'Add',
+        component: () => import('@/views/category/add'),
+        meta: { title: '添加分类', icon: 'add' }
+      }
+    ]
+  },
+  {
+    path: '/comments',
+    component: Layout,
+    redirect: '/comments/list',
+    children: [
+      {
+        path: 'list',
+        name: 'List',
+        component: () => import('@/views/comments/index'),
+        meta: { title: '评论管理', icon: 'comment' }
       }
     ]
   },
