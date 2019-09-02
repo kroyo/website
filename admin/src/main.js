@@ -4,6 +4,9 @@ import 'normalize.css/normalize.css' // A modern alternative to CSS resets
 
 import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
+// 引入mavon-editor
+import mavonEditor from 'mavon-editor'
+import 'mavon-editor/dist/css/index.css'
 
 import '@/styles/index.scss' // global css
 
@@ -30,6 +33,7 @@ if (process.env.NODE_ENV === 'production') {
 
 // set ElementUI lang to EN
 Vue.use(ElementUI)
+Vue.use(mavonEditor)
 
 Vue.config.productionTip = false
 

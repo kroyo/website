@@ -2,6 +2,17 @@
   <div class="app-container list-container">
     <div class="container-header">
       <el-button type="primary" size="small">添加分类</el-button>
+      <div class="header-right">
+        <el-form size="small">
+          <el-form-item>
+            <el-input
+              placeholder="请输入关键词"
+              v-model="keyword">
+              <i slot="suffix" class="el-input__icon el-icon-search"></i>
+            </el-input>
+          </el-form-item>
+        </el-form>
+      </div>
     </div>
     <el-table
       :data="tableData"
@@ -41,6 +52,7 @@
 export default {
   data() {
     return {
+      keyword: '',
       tableData: [{
         date: '2016-05-02',
         name: '王小虎',
@@ -75,6 +87,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.header-right{
+  float: right;
+}
 .container-header{
   margin-bottom: 10px
 }
